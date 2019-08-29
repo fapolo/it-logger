@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "lodash": "^4.17.13",
     "lodash.template": "^4.5.0",
     "mixin-deep": "^1.3.2",
     "react": "^16.9.0",
