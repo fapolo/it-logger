@@ -5,6 +5,7 @@ import {
   ADD_LOG,
   UPDATE_LOG,
   DELETE_LOG,
+  SEARCH_LOGS,
   SET_CURRENT,
   CLEAR_CURRENT
 } from "./types";
@@ -52,6 +53,26 @@ export const addLog = log => async dispatch => {
 
     dispatch({
       type: ADD_LOG,
+      payload: data
+    });
+  } catch (error) {
+    dispatch({
+      type: LOGS_ERROR,
+      payload: error.response.data
+    });
+  }
+};
+
+//Busca logs no DB
+export const searchLogs = text => async dispatch => {
+  try {
+    setLoading();
+
+    const response = await fetch(`/logs?q=${text}`);
+    const data = await response.json();
+
+    dispatch({
+      type: SEARCH_LOGS,
       payload: data
     });
   } catch (error) {
