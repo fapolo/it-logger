@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import TechItem from "./TechItem";
 import { getTechs } from "../../actions/techActions";
 
 const TechListModal = ({ getTechs, tech: { techs, loading } }) => {
-  
   useEffect(() => {
     getTechs();
     //eslint-disable-next-line
@@ -28,11 +27,14 @@ const TechListModal = ({ getTechs, tech: { techs, loading } }) => {
 TechListModal.propTypes = {
   tech: PropTypes.object.isRequired,
   getTechs: PropTypes.func.isRequired
-}
+};
 
 const mapStateToProps = state => ({
   tech: state.tech,
   getTechs: state.getTechs
-})
+});
 
-export default connect(mapStateToProps, { getTechs })(TechListModal);
+export default connect(
+  mapStateToProps,
+  { getTechs }
+)(TechListModal);

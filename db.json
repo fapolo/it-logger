@@ -1,11 +1,11 @@
 {
   "logs": [
     {
+      "id": 1,
       "message": "Trocada a placa de rede na estação 005",
       "attention": false,
-      "tech": "John Doe",
-      "date": "2019-08-30T13:25:42.836Z",
-      "id": 1
+      "tech": "Fabricio Polo",
+      "date": "2019-09-20T20:57:53.402Z"
     },
     {
       "id": 2,
@@ -35,6 +35,16 @@
       "firstName": "Fabricio",
       "lastName": "Polo",
       "id": 4
+    },
+    {
+      "firstName": "Maiara",
+      "lastName": "Flores",
+      "id": 5
+    },
+    {
+      "firstName": "Harry",
+      "lastName": "Potter",
+      "id": 6
     }
   ]
 }
